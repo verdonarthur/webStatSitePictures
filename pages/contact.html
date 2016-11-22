@@ -2,72 +2,76 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
+   <meta charset="utf-8">
+   <title>photo</title>
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/main.css"> </head>
 
 <body>
-
-    <header></header>
-
-    <nav>
-        <ul>
+   <header></header>
+   <nav class="row">
+      <div class="col-md-7"></div>
+      <div class="col-md-5">
+         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="pictures.html">Pictures</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="perso.html">free page</a></li>
-        </ul>
-    </nav>
-
-    <div id="form_contact">
-        <form action="http://www.comem.ch/tools/dump.asp" method="post">
-            First name:<input type="text" value="..."><br>
-            Last name:<input type="text" name="lastname" value="..."><br>
-            concerned<select name="carlist" form="carform">
-              <option value="workshop">workshop</option>
-              <option value="order">order</option>
-              <option value="tech_question">tech question</option>
-              <option value="comment">comment</option>
-            </select><br>
-            <textarea rows="4" cols="50"></textarea><br>
-            <input type="checkbox" name="get_a_copy" value="1">get a copy by mail<br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-
-    <div id="contact_info">
-        <dl>
-            <dt>Horaire</dt>
-            <dd>
-                8:00 - 12:30<br> 13:00 - 17:00
-            </dd>
-
-            <dt>Address</dt>
-            <dd>
-                <address>
-                  Combadi Ltd.<br>
-                  1 Kings Avenue<br>
-                  London<br>
-                  N21 3NA<br>
-                  England<br>
-                  Company No. 08714000
-              </address>
-            </dd>
-
-            <dt>Telephone</dt>
-            <dd>
-                <a href="tel:00306977447033" title="Click to call us">+44 20 7193 3316</a>
-            </dd>
-
-        </dl>
-    </div>
-
-    <div id="map"></div>
-
-    <footer></footer>
+         </ul>
+      </div>
+   </nav>
+   <div class="containers">
+      <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-3 col-xs-12">
+            <h1>Contact Form</h1>
+            <form action="http://www.comem.ch/tools/dump.asp" method="post">
+               <div class="form-group">
+                  <label>First name</label>
+                  <input type="text" placeholder="your first name" class="form-control"> </div>
+               <div class="form-group">
+                  <label>Last name:</label>
+                  <input type="text" name="lastname" value="..." class="form-control"> </div>
+               <div class="form-group">
+                  <label>concerned</label>
+                  <select name="carlist" class="form-control">
+                     <option value="workshop">workshop</option>
+                     <option value="order">order</option>
+                     <option value="tech_question">tech question</option>
+                     <option value="comment">comment</option>
+                  </select>
+               </div>
+               <div class="form-group">
+                  <textarea rows="6" cols="50" class="form-control"></textarea>
+               </div>
+               <div class="checkbox">
+                  <label>
+                     <input type="checkbox" name="get_a_copy" value="1">get a copy by mail </label>
+               </div>
+               <div>
+                  <input type="submit" value="Submit" class="btn btn-primary"> </div>
+            </form>
+         </div>
+         <div id="contact_info" class="col-md-5 col-xs-12">
+            <h1>Information</h1>
+            <dl class="dl-horizontal"> <dt>Horaire</dt>
+               <dd> 8:00 - 12:30
+                  <br> 13:00 - 17:00 </dd> <dt>Address</dt>
+               <dd> <address>
+                            Combadi Ltd.<br>
+                            1 Kings Avenue<br>
+                            London<br>
+                            N21 3NA<br>
+                            England<br>
+                            Company No. 08714000
+                        </address> </dd> <dt>Telephone</dt>
+               <dd> <a href="tel:00306977447033" title="Click to call us">+44 20 7193 3316</a> </dd>
+            </dl>
+         </div>
+         <div class="col-md-2"></div>
+      </div>
+   </div>
+   <footer></footer>
 </body>
-
-<script></script>
 
 </html>
