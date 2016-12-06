@@ -6,81 +6,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>photo</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/components/reset.min.css">
+    <link rel="stylesheet" href="./css/semantic.min.css">
+    <link rel="stylesheet" href="./css/components/icon.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-<header></header>
-<nav>
-    <div class="container">
-        <div class="col-md-12 col-xs-12">
+<header>
+    <nav class="ui menu stackable" id="menuHome">
+        <div class="item" id="logo"><img  src="./pictures/logo.svg"></div>
+        <a class="item active">Home</a>
+        <a class="item">Pictures</a>
+        <a class="item">Perso</a>
+        <a class="item">Contact</a>
+        <div class="right  menu">
+            <div class="ui item icon">
+                <i class="500px icon"></i>
+            </div>           
+            <div class="ui item icon">
+                <i class="flickr icon"></i>
+            </div>            
+            <div class="ui item icon">
+                <i class="paypal icon"></i>
+            </div>
+       </div>
+    </nav>
+</header>
+<div id="intro" class="intro ui">
+        <div>
+            <h1>The best photography in the most extreme moments</h1>
+            <p>Ours photographers are made for this
+            </p></div>
+</div>
+<div id="introTopGear" class="intro ui">
+    <div>
+        <h1>Get 4K Pictures</h1>
+        <p>Ours photographers use the best camera in the world</p></div>
+</div>
+<div id="introReallyPro" class="intro ui ">
+    <div><h1>A new point of view</h1>
+        <p>Ours drones can view thing you never seen</p></div>
+</div>
+
+<div class="separator ui fluid container">
+    <h4>Latest news</h4>
+</div>
+
+<section class="ui container">
+    <div class="ui four cards stackable">
+        <article class="ui card ">
+
+            <div class="content">
+                <div class="header"><h1>We got our logo !</h1></div>
+                <div class="meta">
+                    <time datetime="2016-11-01T00:00:00+01:00">Last edit the 1st november</time>
+                    by EyeSnow
+                </div>
+                <div class="description">
+                    <p>We just got our new logo and it's superb !</p>
+
+                </div>
+            </div>
+            <div class="extra content">
+                <ul class="category ui horizontal bulleted list">
+                    <li class="item">SnowEye</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="ui card row">
+            <div class="content">
+                <div class="header"><h1>Black Friday !</h1></div>
+                <div class="meta">
+                    <time datetime="2016-11-25T00:00:00+01:00">Last edit the 25th november</time>
+                    by EyeSnow
+                </div>
+                <div class="description">
+                    <p>Get a 50% reduction today !</p>
+                </div>
+            </div>
+            <div class="extra content">
+                <ul class="category ui horizontal bulleted list">
+                    <li class="item">SnowEye</li>
+                    <li class="item">Reduction</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="ui card row">
+            <div class="content">
+                <div class="header"><h1>HAPPY NEW YEAR !</h1></div>
+                <div class="meta">
+                    <time datetime="2016-12-31T00:00:00+01:00">Last edit the 31th december</time>
+                    by EyeSnow
+                </div>
+                <div class="description">
+                    <p>Happy new year ! </p>
+                    <p>Free pictures at the office today !</p>
+                </div>
+            </div>
+            <div class="extra content">
+                <ul class="category ui horizontal bulleted list">
+                    <li class="item">SnowEye</li>
+                    <li class="item">Offer</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</section>
+<footer>
+    <div class="ui container grid two column">
+        <div class="ui one column">
+            <h4>© 2016 - Arthur Verdon inc.</h4>
+            <h4>Social Network</h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./pages/pictures.html">Pictures</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-                <li><a href="./pages/perso.html">free page</a></li>
+                <li><a>Facebook</a></li>
+                <li><a>Google+</a></li>
+                <li><a>Instagram</a></li>
             </ul>
         </div>
-    </div>
-</nav>
-<div id="mainDiv">
-    <div id="intro" class="container">
-        <div class="col-md-12 col-xs-12">
-            <h1>Intro</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cupiditate repellendus enim, totam
-                nemo. Temporibus doloremque natus illum, illo hic nisi, itaque aspernatur voluptatibus beatae, omnis
-                officia reprehenderit expedita ab. </p>
+        <div class="ui one column">
+            <h4>Sitemap</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Perso</a></li>
+            </ul>
         </div>
-        <div class="col-md-2"></div>
-    </div>
-    <section class="container">
-        <div class="col-md-12">
-            <article>
-                <ul class="category list-inline">
-                    <li>cat 1</li>
-                    <li> cat 2</li>
-                    <li> cat 3</li>
-                </ul>
-                <div class="container-fluid content">
-                    <h2>art1</h2>
-                    <p class="extract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, ad?</p> <span
-                        class="info"><time datetime="2009-09-04T16:31:24+02:00">Last edit the 4th september</time> by author 1</span>
-                </div>
-                <div class="container-fluid"><a href="#" class="btnGoTo col-md-12 col-xs-12">link to</a></div>
-            </article>
-            <article>
-                <ul class="category list-inline">
-                    <li>cat 1</li>
-                    <li> cat 2</li>
-                    <li> cat 3</li>
-                </ul>
-                <div class="container-fluid content">
-                    <h2>art1</h2>
-                    <p class="extract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, ad?</p> <span
-                        class="info"><time datetime="2009-09-04T16:31:24+02:00">Last edit the 4th september</time> by author 1</span>
-                </div>
-                <div class="container-fluid"><a href="#" class="btnGoTo col-md-12 col-xs-12">link to</a></div>
-            </article>
-            <article>
-                <ul class="category list-inline">
-                    <li>cat 1</li>
-                    <li> cat 2</li>
-                    <li> cat 3</li>
-                </ul>
-                <div class="container-fluid content">
-                    <h2>art1</h2>
-                    <p class="extract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, ad?</p> <span
-                        class="info"><time datetime="2009-09-04T16:31:24+02:00">Last edit the 4th september</time> by author 1</span>
-                </div>
-                <div class="container-fluid"><a href="#" class="btnGoTo col-md-12 col-xs-12">link to</a></div>
-            </article>
-        </div>
-    </section>
-</div>
-<footer>
-    <div class="container">
-        <div class="col-md-12 col-xs-12">© 2016 - Arthur Verdon inc.</div>
     </div>
 </footer>
 </body>

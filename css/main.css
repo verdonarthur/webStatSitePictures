@@ -1,0 +1,108 @@
+/**
+TEST POLICE : Russo One OR Orbitron OR Bungee
+ */
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900|Roboto');
+
+body {
+    /*background: url("../pictures/snow.png");*/
+    #background-color: #e9eaf2;
+    #background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+    font-family: 'Roboto', sans-serif !important;
+}
+
+header {
+}
+#menuHome {
+   background-color: #2E3940 !important;
+   border-radius: 0 !important;
+}
+.ui.menu .item{
+    font-family: 'Catamaran', sans-serif;
+    #font-size: 1.1em;
+    color: #E9EAF2 ;
+   text-transform: uppercase;
+}
+.ui.menu .item.active{
+    color: #E9EAF2 ;
+   
+}
+.intro {
+    padding-top: 3%;
+}
+.intro h1 {
+    font-family: 'Catamaran', sans-serif !important;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #E9EAF2;
+}
+.intro p {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    color: #E9EAF2;
+}
+.intro div {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
+}
+
+#intro {
+    height: 100vh;
+    background: url("../pictures/introBanneer.jpg") center no-repeat;
+    background-size: cover;
+}
+#introTopGear {
+    height: 100vh;
+    background: url("../pictures/leftIntro.jpg") center no-repeat;
+    background-size: cover;
+}
+#introReallyPro {
+    height: 100vh;
+    background: url("../pictures/dronebanneer.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.separator{
+    background-color: #2E3940;
+    height: 50px;
+}.separator h4{
+     color: white;
+     text-align: center;
+     font-size: 1.3em;
+     line-height: 50px !important;
+     font-family: 'Catamaran', sans-serif !important;
+ }
+
+section {
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+footer {
+    height: 50vh;
+    padding-top: 5vh;
+    background-color: #2E3940;
+    color:white;
+    font-size:1.2em;
+}
+/*
+SCROLLING A TESTER
+
+a[ id= "servicios" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+a[ id= "galeria" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( -500px );
+    transform: translateY( -500px );
+}
+a[ id= "contacto" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
+
+ */
