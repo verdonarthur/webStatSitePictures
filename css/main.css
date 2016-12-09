@@ -3,106 +3,325 @@ TEST POLICE : Russo One OR Orbitron OR Bungee
  */
 @import url('https://fonts.googleapis.com/css?family=Catamaran:900|Roboto');
 
-body {
-    /*background: url("../pictures/snow.png");*/
-    #background-color: #e9eaf2;
-    #background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
-    font-family: 'Roboto', sans-serif !important;
+body{
+    font-family: "Roboto", sans-serif;
+    margin:0;
+    padding: 0;
+}
+h1,h2,h3,h4{
+    font-family: "Catamaran", sans-serif;
+}
+a{
+    color: #CEDEF2;
+}
+a:hover{
+    color: #E9EAF2;
 }
 
-header {
+/*
+#################### HEADER AND MENU #####################
+*/
+header nav{
+    display:flex;
+    width:100%;
+    background-color: #2E3940;
+    color:#E9EAF2;
+    height: 5em;
+    /*z-index: 10;
+    left:0;top:0;
+    position: fixed;
+    margin-bottom:5em;*/
+
 }
-#menuHome {
-   background-color: #2E3940 !important;
-   border-radius: 0 !important;
+header nav .menu_left{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
 }
-.ui.menu .item{
-    font-family: 'Catamaran', sans-serif;
-    #font-size: 1.1em;
-    color: #E9EAF2 ;
-   text-transform: uppercase;
+header nav *{
+    flex-basis: auto;
 }
-.ui.menu .item.active{
-    color: #E9EAF2 ;
-   
+header nav #logo_menu{
+    padding-right: 3%;
+    padding-left: 1%;
 }
-.intro {
-    padding-top: 3%;
+header nav #logo_menu img{
+    height: 3em;
+    margin-top:1em;
+    margin-bottom:1em;
 }
-.intro h1 {
-    font-family: 'Catamaran', sans-serif !important;
-    font-size: 3.5em;
+header nav #link_menu{
+    flex-grow: 1;
+}
+header nav #link_menu ul{
+    margin:0;
+    padding: 0;
+}
+header nav li{
+    list-style: none;
+    display:inline;
+    padding-right:5%;
+    line-height: 5em;
+}
+header nav li a{
+    color:white;
+    text-decoration: none;
     text-transform: uppercase;
-    text-align: center;
-    color: #E9EAF2;
-}
-.intro p {
-    padding-left: 20%;
-    padding-right: 20%;
-    font-family: 'Catamaran', sans-serif;
-    font-size: 1.3em;
-    text-align: center;
-    color: #E9EAF2;
-}
-.intro div {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-bottom: 15px;
+    font-family: "Catamaran", sans-serif;
 }
 
+/*
+#################### MAIN CONTENT #####################
+*/
+section{
+    width: 70%;
+    padding: 0 15% 0 15%;
+}
+
+/*
+#################### HOMEPAGE #####################
+*/
+#test{
+
+}
+.intro{
+    height: 80vh;
+    width: 100%;
+    background-color: #0FA0CE;
+    font-family: "Catamaran", sans-serif;
+    color:white;
+    text-align: center;
+    padding-top: 20vh;
+
+    /* SMOOTH ANCHOR TRANSITION
+    z-index:0;
+    -webkit-transform: translateZ( 0 );
+    transform: translateZ( 0 );
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;*/
+}
+.intro .intro_text{
+    background-color: rgba(0,0,0,0.3);
+    padding-top: 1em;
+    padding-bottom: 0.2em;
+}
+.intro_text p{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+}
+.intro .intro_text h4{
+    text-transform: uppercase;
+}
+/* SMOOTH ANCHOR TRANSITION
+a[ id= "intro" ]:target ~ #test .intro {
+    -webkit-transform: translateY( 0);
+    transform: translateY( 0 );
+}
+a[ id= "introTopGear" ]:target ~ #test .intro {
+    -webkit-transform: translateY( -100vh );
+    transform: translateY( -100vh );
+}
+a[ id= "introReallyPro" ]:target ~ #test .intro {
+    -webkit-transform: translateY( -200vh );
+    transform: translateY( -200vh );
+}
+*/
 #intro {
-    height: 100vh;
+    transform: rotateY(0deg);
     background: url("../pictures/introBanneer.jpg") center no-repeat;
     background-size: cover;
 }
 #introTopGear {
-    height: 100vh;
     background: url("../pictures/leftIntro.jpg") center no-repeat;
     background-size: cover;
 }
 #introReallyPro {
-    height: 100vh;
     background: url("../pictures/dronebanneer.jpg") center no-repeat;
     background-size: cover;
 }
 
-.separator{
-    background-color: #2E3940;
-    height: 50px;
-}.separator h4{
-     color: white;
-     text-align: center;
-     font-size: 1.3em;
-     line-height: 50px !important;
-     font-family: 'Catamaran', sans-serif !important;
- }
-
-section {
-    padding-top: 10vh;
-    height: 100vh;
+.intro .intro_btn{
+    padding-top: 7vh;
 }
-
-footer {
-    height: 50vh;
-    padding-top: 5vh;
-    background-color: #2E3940;
+.intro .intro_btn a{
     color:white;
-    font-size:1.2em;
+    border: 3px solid white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 5em;
+    margin-right: 3%;
+    margin-left: 3%;
+    width: 1em;
+    height: 1em;
 }
+
+
+
 /*
-SCROLLING A TESTER
-
-a[ id= "servicios" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
+#################### FOOTER #####################
+*/
+footer{
+    width: 100%;
+    background-color: #2E3940;
+    color:#E9EAF2;
+    padding-top: 1%;
+    margin-top: 3%;
+    height: 80vh;
 }
 
-a[ id= "galeria" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -500px );
-    transform: translateY( -500px );
+ul.social_list{
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: stretch;
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-a[ id= "contacto" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
+ul.social_list li {
+    list-style: none;
+    flex-basis: auto;
+}
+ul.social_list li a{
+    text-decoration: none;
 }
 
+ul.sitemap ul{
+    margin-top:0;
+    margin-bottom:0;
+}
+ul.sitemap li{
+    margin:0;
+    padding: 0;
+}
+ul.sitemap li a{
+    text-decoration: none;
+
+}
+
+/*
+#################### UTILITY CLASS #####################
  */
+.separator{
+    width: 100%;
+    background-color: #2E3940;
+    color:#E9EAF2;
+    height: 10vh;
+    text-align: center;
+}
+.separator h4{
+    line-height: 10vh;
+}
+.news_cards{
+    padding-top: 3%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-shrink: 1;
+}
+.news_cards article{
+    border:solid #2E3940 5px;
+    border-radius: 10px;
+    flex-basis: 20vw;
+    margin: 1% 1% 1% 1%;
+    text-align: left;
+    #background-color: #CEDEF2;
+    color:#2E3940;
+
+}
+.news_cards article .edit{
+    font-size: 0.8em;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+.news_cards article .content{
+    font-size: 1.2em;
+    margin: 0;
+    padding: 1% 3% 1% 3%;
+    height: 85%;
+}
+.news_cards article .category{
+    position: relative;
+    bottom: 0;
+    padding:0 5% 0 5%;
+    border-top: solid #2E3940 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.news_cards article .category ul li{
+    display: inline;
+    white-space: nowrap;
+}
+.news_cards article .category ul li:after{
+    content: " \00b7";
+    font-weight: bold;
+}
+.news_cards article .category ul li:last-child:after{content: none !important;}
+
+.full_page_section{
+    min-height: 100vh;
+}
+
+
+/*
+#################### MEDIA QUERY #####################
+*/
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .news_cards{
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .news_cards article{
+        margin-top:20px;
+        flex-basis: 40vh;
+    }
+}
+
+/* Phablet */
+@media (max-width: 750px) {
+    header #menuHome{
+        height: inherit;
+    }
+    header nav .menu_left{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav .menu_left #logo_menu{
+        padding: 0;
+    }
+    header nav .menu_left #logo_menu img{
+        margin-top:0.5em;
+        margin-bottom:0.5em;
+    }
+    header nav #link_menu ul{
+        flex-direction: column;
+        height: inherit;
+    }
+    header nav .menu_left ul li{
+        display: inherit;
+        flex-basis: auto;
+        text-align: center;
+        padding: 0;
+        line-height: 2em;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+}
+
+/* Mini Mobile */
+@media (max-width: 400px) {}
