@@ -2,76 +2,123 @@
 <html>
 
 <head>
-   <meta charset="utf-8">
-   <title>photo</title>
-   <link rel="stylesheet" href="../css/bootstrap.min.css">
-   <link rel="stylesheet" href="../css/main.css"> </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1, user-scalable=no">
+    <title>photo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../library/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="../library/Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" href="../library/gallery/gallery.min.css">
+    <link rel="stylesheet" href="../library/gallery/gallery.theme.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
 
 <body>
-   <header></header>
-   <nav class="row">
-      <div class="col-md-7"></div>
-      <div class="col-md-5">
-         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="pictures.html">Pictures</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="perso.html">free page</a></li>
-         </ul>
-      </div>
-   </nav>
-   <div class="containers">
-      <div class="row">
-         <div class="col-md-2"></div>
-         <div class="col-md-3 col-xs-12">
+<header>
+    <nav class="" id="menuHome">
+        <div class="menu_left">
+            <div id="logo_menu"><img src="../pictures/_logo.svg"></div>
+            <div id="link_menu">
+                <ul>
+                    <li><a href="../index.html" class="">Home</a></li>
+                    <li><a href="pictures.html" class="">Photos</a></li>
+                    <li><a href="perso.html" class="">Tarifs</a></li>
+                    <li><a href="contact.html" class="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container main_container">
+    <div class="row">
+        <div class="six columns">
             <h1>Contact Form</h1>
             <form action="http://www.comem.ch/tools/dump.asp" method="post">
-               <div class="form-group">
-                  <label>First name</label>
-                  <input type="text" placeholder="your first name" class="form-control"> </div>
-               <div class="form-group">
-                  <label>Last name:</label>
-                  <input type="text" name="lastname" value="..." class="form-control"> </div>
-               <div class="form-group">
-                  <label>concerned</label>
-                  <select name="carlist" class="form-control">
-                     <option value="workshop">workshop</option>
-                     <option value="order">order</option>
-                     <option value="tech_question">tech question</option>
-                     <option value="comment">comment</option>
-                  </select>
-               </div>
-               <div class="form-group">
-                  <textarea rows="6" cols="50" class="form-control"></textarea>
-               </div>
-               <div class="checkbox">
-                  <label>
-                     <input type="checkbox" name="get_a_copy" value="1">get a copy by mail </label>
-               </div>
-               <div>
-                  <input type="submit" value="Submit" class="btn btn-primary"> </div>
+                <label>First name</label>
+                <input type="text" placeholder="your first name">
+                <label>Last name:</label>
+                <input type="text" name="lastname" placeholder="your last name">
+                <label>concerned</label>
+                <select name="carlist">
+                    <option value="workshop">workshop</option>
+                    <option value="order">order</option>
+                    <option value="tech_question">tech question</option>
+                    <option value="comment">comment</option>
+                </select>
+                <label>votre commentaire</label>
+                <textarea rows="6" cols="25"></textarea>
+                <label>
+                    <input type="checkbox" name="get_a_copy" value="1">
+                    <span class="label-body">get a copy by mail </span></label>
+                <input type="submit" value="Submit" class="btn btn-primary">
             </form>
-         </div>
-         <div id="contact_info" class="col-md-5 col-xs-12">
+        </div>
+        <div id="contact_info" class="six columns">
             <h1>Information</h1>
-            <dl class="dl-horizontal"> <dt>Horaire</dt>
-               <dd> 8:00 - 12:30
-                  <br> 13:00 - 17:00 </dd> <dt>Address</dt>
-               <dd> <address>
-                            Combadi Ltd.<br>
-                            1 Kings Avenue<br>
-                            London<br>
-                            N21 3NA<br>
-                            England<br>
-                            Company No. 08714000
-                        </address> </dd> <dt>Telephone</dt>
-               <dd> <a href="tel:00306977447033" title="Click to call us">+44 20 7193 3316</a> </dd>
+            <dl>
+                <dt>Horaire</dt>
+                <dd> 8:00 - 12:30
+                    <br> 13:00 - 17:00
+                </dd>
+                <dt>Address</dt>
+                <dd>
+                    <address>
+                        Combadi Ltd.<br>
+                        1 Kings Avenue<br>
+                        London<br>
+                        N21 3NA<br>
+                        England<br>
+                        Company No. 08714000
+                    </address>
+                </dd>
+                <dt>Telephone</dt>
+                <dd><a href="tel:00306977447033" title="Click to call us">+44 20 7193 3316</a></dd>
             </dl>
-         </div>
-         <div class="col-md-2"></div>
-      </div>
-   </div>
-   <footer></footer>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1238.2511930987118!2d-0.0997771562350433!3d51.63232399633358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876192dc50855c3%3A0x74fcf0a3af65c229!2sKing&#39;s+Ave%2C+London+N21%2C+Royaume-Uni!5e0!3m2!1sfr!2sch!4v1483622571984"
+                    allowfullscreen></iframe>
+        </div>
+        <!--<div class="two columns"></div>-->
+    </div>
+</div>
+<footer class="">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h4>© 2016 - Arthur Verdon inc.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <h4>Social Network</h4>
+                <ul class="social_list">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-flickr"></a></li>
+                    <li><a href="#" class="fa fa-snapchat href=#"></a></li>
+                </ul>
+            </div>
+            <div class="six columns">
+                <h4>Sitemap</h4>
+                <ul class="sitemap">
+                    <li>
+                        <a href="../index.html">Home</a>
+                        <ul>
+                            <li><a href="../index.html#intro">Intro</a></li>
+                            <li><a href="../index.html#introTopGear">4k pictures</a></li>
+                            <li><a href="../index.html#introReallyPro">Drones</a></li>
+                            <li><a href="../index.html#news">News</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                    <li><a href="../pages/pictures.html">Gallery</a></li>
+                    <li><a href="../pages/perso.html">Tarifs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>
