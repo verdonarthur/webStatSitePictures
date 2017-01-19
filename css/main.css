@@ -7,19 +7,11 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
-    color: #2E3940;
+    color: #1B252F;
 }
 
 h1, h2, h3, h4 {
     font-family: "Catamaran", sans-serif;
-}
-
-a {
-    color: #CEDEF2;
-}
-
-a:hover {
-    color: #E9EAF2;
 }
 
 /*
@@ -28,10 +20,9 @@ a:hover {
 header nav {
     display: flex;
     width: 100%;
-    background-color: #2E3940;
-    color: #E9EAF2;
+    background-color: #4B86C1;
     height: 5em;
-
+    box-shadow: black 0px 0px 10px;
 }
 
 header nav .menu_left {
@@ -75,11 +66,16 @@ header nav li {
 }
 
 header nav li a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Catamaran", sans-serif;
     font-size: 1.4em;
+}
+
+header nav li a:hover {
+    color: #F5F3F7;
+    transition: 0.5s;
 }
 
 /*
@@ -92,7 +88,6 @@ header nav li a {
 .intro {
     height: 80vh;
     width: 100%;
-    background-color: #0FA0CE;
     font-family: "Catamaran", sans-serif;
     color: white;
     text-align: center;
@@ -115,7 +110,6 @@ header nav li a {
 }
 
 #intro {
-    transform: rotateY(0deg);
     background: url("./assets/img/SkiFreeride_1080.jpg") center no-repeat;
     background-size: cover;
 }
@@ -152,60 +146,69 @@ header nav li a {
 .gallery {
     margin: 0;
     padding: 0 0 2% 0;
-
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
 }
 
 .gallery .item {
-    margin: 0;
-    height: 90vh;
-    display: flex;
+    position: relative;
+    margin: 1%;
+    align-items: center;
     border-radius: 10px;
     background: #2E3940;
+    width: 48%;
+    transition: 0.5s;
 }
 
 .gallery .item img {
     width: 100%;
-    align-self: center;
+    border-radius: 10px;
+}
+
+.gallery .item:hover figcaption {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.gallery .item:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .gallery .item figcaption {
     position: absolute;
-    width: 20%;
-    top: 1%;
-    left: 40%;
+    bottom: 0;
+    width: 98%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border-radius: 10px;
+    padding: 1%;
+    opacity: 0;
+    transition: 0.5s;
 }
 
-.gallery .item * {
+.gallery .item figcaption * {
+    font-size: 0.9em;
     padding: 0;
     margin: 0;
-    font-size: 0.9em;
 }
 
-.gallery .item h2 {
-    font-size: 1.5em;
-}
-
-.gallery .controls {
-    margin-bottom: 2%;
+.gallery .item figcaption h2 {
+    font-size: 1.2em;
 }
 
 .pictures_category_container {
-    display: flex;
-    align-content: stretch;
-    align-items: stretch;
     padding-top: 1%;
     padding-bottom: 1%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .pictures_category {
     margin: 30px 0 0 0;
-    padding: 0% 1% 0% 1%;
+    padding: 0% 5% 0% 5%;
     width: 90%;
     background: #ffffff;
 }
@@ -234,47 +237,62 @@ header nav li a {
 .price_container {
     display: flex;
     flex-flow: wrap row;
-    justify-content: center;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .price_container .price {
+    min-width: 470px;
     position: relative;
-    width: 29%;
+    width: 25%;
     padding: 0;
-    margin: 2vh 0.5% 2vh 0.5%;
+    margin: 4vh 0.5% 2vh 0.5%;
     display: flex;
     flex-flow: wrap column;
-    border-radius: 5px;
-    background: #2e3940;
-    height: 60vh;
-    min-height: 400px;
+    align-items: center;
+    height: 80vh;
+    min-height: 800px;
     text-align: center;
     font-size: 1.5em;
-    color: #e9eaf2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.price_container .price.advised {
+    transform: scale(1.1);
 }
 
 .price_container .price ul {
+    border-top: 1px solid lightgrey;
     list-style: none;
-    padding: 0;
     margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 2%;
 }
 
 .price_container .price ul li {
-    margin: 0;
+    margin-top: 0;
     padding: 0;
 }
 
-.price_container .price ul .headers {
+.price_container .price .headers {
+    padding: 3% 0 3% 0;
 }
 
-.price_container .price ul .amount {
+.price_container .price .amount {
     font-size: 3em;
-    font-weight: bolder;
-    background: #cedef2;
-    color: #2e3940;
-    border-bottom: 5px solid white;
-    border-top: 5px solid white;
-    margin-bottom: 2%;
+    background: #4B86C1;
+    color: white;
+    border-radius: 50%;
+    height: 5.5em;
+    width: 5.5em;
+    line-height: 5.5em;
+    margin-bottom: 5%;
 }
 
 .price_container .price h2 {
@@ -287,37 +305,82 @@ header nav li a {
 #################### FOOTER #####################
 */
 footer {
+    position: relative;
     width: 100%;
-    background-color: #2E3940;
-    color: #E9EAF2;
+    background-color: #4B86C1;
+    color: white;
     padding-top: 1%;
-    height: 80vh;
-    min-height: 500px;
+    height: 30vh;
+    min-height: 300px;
+}
+
+footer .footer_content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding: 0 10% 0 10%;
+}
+
+footer .footer_content div {
+    width: 45%;
+    margin: 0 2.5% 0 2.5%;
+}
+
+footer .footer_content div h4 {
+    margin: 0;
+}
+
+footer .copyright {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 99%;
+    padding: 0.5%;
+}
+
+footer .copyright h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
 }
 
 ul.social_list {
-    font-size: 1.6em;
+    font-size: 2.5em;
     display: flex;
     flex-direction: row;
     width: 60%;
-    align-items: stretch;
+    align-items: center;
     align-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 ul.social_list li {
     list-style: none;
     flex-basis: auto;
+    border: 5px solid white;
+    border-radius: 100%;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    margin-right: 2%;
 }
 
 ul.social_list li a {
     text-decoration: none;
+    color: white;
+}
+
+ul.sitemap {
+    list-style: none;
 }
 
 ul.sitemap ul {
     margin-top: 0;
     margin-bottom: 0;
+    list-style: none;
 }
 
 ul.sitemap li {
@@ -327,7 +390,7 @@ ul.sitemap li {
 
 ul.sitemap li a {
     text-decoration: none;
-
+    color: white;
 }
 
 /*
@@ -335,8 +398,8 @@ ul.sitemap li a {
  */
 .separator {
     width: 100%;
-    background-color: #2E3940;
-    color: #E9EAF2;
+    background-color: #4B86C1;
+    color: #FFFFFF;
     height: 10vh;
     text-align: center;
 }
@@ -358,45 +421,60 @@ ul.sitemap li a {
     width: 28%;
     min-height: 500px;
     height: 70vh;
-    padding: 1%;
     margin: 5vh 1% 2vh 1%;
-    border-radius: 10px;
-    background: #2e3940;
-    color: #e9eaf2;
-    border: 5px #e9eaf2 solid;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.news_cards article:hover {
+    transform: scale(1.05);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 .news_cards article .edit {
     position: absolute;
     font-size: 0.8em;
-    font-weight: bold;
     bottom: 5px;
     right: 5px;
+    text-transform: uppercase;
 }
 
 .news_cards article .pictures {
+    position: relative;
     margin-bottom: 5%;
     height: 50%;
+    background: black;
     display: flex;
-    justify-content: center;
 }
 
 .news_cards article .pictures img {
-    height: 100%;
+    width: 100%;
+}
+
+.news_cards article .pictures h1 {
+    position: absolute;
+    display: block;
+    width: 98%;
+    bottom: 0;
+    color: white;
+    background: #4B86C1;
+    padding: 1%;
+    margin: 0;
 }
 
 .news_cards article .content {
     font-size: 1.2em;
     margin: 0;
-    height: 40%;
+    height: 35%;
+    padding: 1%;
 }
 
 .news_cards article .category {
     position: relative;
     bottom: 0;
-    border-top: solid #E9EAF2 5px;
+    border-top: solid lightgrey 1px;
     text-transform: uppercase;
-    font-weight: bolder;
+    padding: 1%;
 }
 
 .news_cards article .category ul li {
@@ -430,23 +508,28 @@ ul.sitemap li a {
 @media (max-width: 1000px) {
     .news_cards {
         flex-direction: column;
-        align-content: space-between;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 5%;
     }
 
     .news_cards article {
-        width: 100%;
+        width: 65%;
 
     }
 
-    .gallery .item {
-        height: 50vh;
+    .price_container {
+        display: flex;
+        flex-flow: wrap column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .gallery .item figcaption {
-        position: absolute;
-        width: 50%;
-        top: 1%;
-        left: 25%;
+    .price_container .price {
+        width: 60%;
+        margin: 5% 0 5% 0;
     }
 }
 
@@ -484,29 +567,40 @@ ul.sitemap li a {
         line-height: 2em;
     }
 
-    .price_container {
-        display: flex;
-        flex-flow: wrap column;
+    .gallery {
+        flex-flow: column nowrap;
+    }
+
+    .gallery .item {
+        width: 100%;
     }
 
     .price_container .price {
-        width: 96%;
+        width: 80%;
+
+    }
+
+    footer .social_list {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+
+    ul.social_list li {
+        width: 1em;
+        height: 1em;
+        line-height: 0.7em;
+        border:3px solid white;
+    }
+
+    ul.social_list li a{
+        font-size: 0.5em;
     }
 
 }
 
 /* Mobile */
 @media (max-width: 550px) {
-    .gallery .item {
-        height: 30vh;
-    }
-
-    .gallery .item figcaption {
-        position: absolute;
-        width: 100%;
-        top: 1%;
-        left: 0;
-    }
 }
 
 /* Mini Mobile */
