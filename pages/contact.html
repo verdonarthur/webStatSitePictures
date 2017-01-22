@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="fr" >
 
 <head>
     <meta charset="utf-8">
@@ -9,76 +9,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../library/Skeleton-2.0.4/css/normalize.css">
     <link rel="stylesheet" href="../library/Skeleton-2.0.4/css/skeleton.css">
-    <link rel="stylesheet" href="../library/gallery/gallery.min.css">
-    <link rel="stylesheet" href="../library/gallery/gallery.theme.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
+
 <header>
-    <nav class="" id="menuHome">
+    <nav id="menuHome">
         <div class="menu_left">
-            <div id="logo_menu"><img src="../pictures/_logo.svg"></div>
+            <div id="logo_menu"><img src="../pictures/logo.png" alt="Logo de l'entreprise"></div>
             <div id="link_menu">
                 <ul>
-                    <li><a href="../index.html" class="">Home</a></li>
-                    <li><a href="pictures.html" class="">Photos</a></li>
-                    <li><a href="perso.html" class="">Tarifs</a></li>
-                    <li><a href="contact.html" class="">Contact</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="pictures.html">Photos</a></li>
+                    <li><a href="perso.html">Tarifs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="container main_container">
-    <div class="row">
-        <div class="six columns">
-            <h1>Contact Form</h1>
-            <form action="http://www.comem.ch/tools/dump.asp" method="post">
-                <label>First name</label>
-                <input type="text" placeholder="your first name">
-                <label>Last name:</label>
-                <input type="text" name="lastname" placeholder="your last name">
-                <label>concerned</label>
-                <select name="carlist">
-                    <option value="workshop">workshop</option>
-                    <option value="order">order</option>
-                    <option value="tech_question">tech question</option>
-                    <option value="comment">comment</option>
+
+<div class="main_container contact">
+    <div>
+        <h1>Contact Form</h1>
+        <form action="http://www.comem.ch/tools/dump.asp" method="post">
+
+            <fieldset>
+                <legend>Information sur votre personne</legend>
+                <label>Nom</label>
+                <input type="text" placeholder="votre prénom" required>
+
+                <label>Prénom</label>
+                <input type="text" name="lastname" placeholder="votre prénom" required>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Information sur votre demande</legend>
+
+                <label>Concerne</label>
+                <select name="carlist" required>
+                    <option value="">Autre</option>
+                    <option value="workshop">Un workshop</option>
+                    <option value="order">Une commande</option>
+                    <option value="tech_question">Une question technique</option>
+                    <option value="comment">Un commentaire</option>
                 </select>
-                <label>votre commentaire</label>
-                <textarea rows="6" cols="25"></textarea>
-                <label>
-                    <input type="checkbox" name="get_a_copy" value="1">
-                    <span class="label-body">get a copy by mail </span></label>
-                <input type="submit" value="Submit" class="btn btn-primary">
-            </form>
-        </div>
-        <div id="contact_info" class="six columns">
-            <h1>Information</h1>
-            <dl>
-                <dt>Horaire</dt>
-                <dd> 8:00 - 12:30
-                    <br> 13:00 - 17:00
-                </dd>
-                <dt>Address</dt>
-                <dd>
-                    <address>
-                        Combadi Ltd.<br>
-                        1 Kings Avenue<br>
-                        London<br>
-                        N21 3NA<br>
-                        England<br>
-                        Company No. 08714000
-                    </address>
-                </dd>
-                <dt>Telephone</dt>
-                <dd><a href="tel:00306977447033" title="Click to call us">+44 20 7193 3316</a></dd>
-            </dl>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1238.2511930987118!2d-0.0997771562350433!3d51.63232399633358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876192dc50855c3%3A0x74fcf0a3af65c229!2sKing&#39;s+Ave%2C+London+N21%2C+Royaume-Uni!5e0!3m2!1sfr!2sch!4v1483622571984"
-                    allowfullscreen></iframe>
-        </div>
-        <!--<div class="two columns"></div>-->
+
+                <label>Votre demande</label>
+                <textarea rows="6" cols="25" required></textarea>
+
+            </fieldset>
+
+            <label>
+                <input type="checkbox" name="get_a_copy" value="1">
+                <span class="label-body">Recevoir une copie par mail ?</span>
+            </label>
+
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+    <div id="contact_info">
+        <h1>Informations</h1>
+        <dl>
+            <dt>Horaires</dt>
+            <dd> 8:00 - 12:30
+                <br> 13:00 - 17:00
+            </dd>
+            <dt>Adresse</dt>
+            <dd>
+                <address>
+                    SnowEye AG<br>
+                    Rue de l'enfer 666<br>
+                    1003 Lausanne, Suisse<br>
+                </address>
+            </dd>
+            <dt>Telephone</dt>
+            <dd><a href="tel:00306977447033" title="Click to call us">+44 20 7193 3316</a></dd>
+        </dl>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43899.4525320285!2d6.617475658051304!3d46.55330885689853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c293ecd89a7e5%3A0xeb173fc9cae2ee5e!2sLausanne%2C+Suisse!5e0!3m2!1sfr!2sus!4v1485098189033"
+                allowfullscreen></iframe>
     </div>
 </div>
 <footer>
